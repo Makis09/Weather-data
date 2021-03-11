@@ -1,7 +1,7 @@
 "use strict";
 import HomePage from "./view/pages/homepage.js";
-import Navbar from "./view/components/navbar.js";
-import Footer from "./view/components/footer.js";
+import Navbar from "./view/components/Navbar/navbar.js";
+import Footer from "./view/components/Footer/footer.js";
 
 const initialize = async () => {
 

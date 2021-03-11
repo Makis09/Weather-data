@@ -1,61 +1,176 @@
 * {
-    box-sizing: border-box;
-  }
-  body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.navbar {
+  width: 100%;
+  padding: 15px 100px;
+  font-size: 19px;
+  background-color: skyblue;
+  box-shadow: 0px 5px 13px 0px rgba(34, 33, 33, 0.1);
+  -webkit-box-shadow: 0px 5px 13px 0px rgba(34, 33, 33, 0.1);
+  -moz-box-shadow: 0px 5px 13px 0px rgba(34, 33, 33, 0.1);
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: skyblue;
+  list-style: none;
+  align-items: center;
+  margin-left: 50px;
+  padding: 0;
+}
+.navbar .container ul li {
+  margin: 0 5px;
+}
+.navbar .container ul li a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
 
+.navbar-brand img {
+  width: 50px;
+}
+.navbar-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homepage {
+  display: flex;
+}
+
+.ListOfDays-container {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.WeatherWidget-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.SingleDayInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin-bottom: 30px;
+}
+.SingleDayInfo img {
+  width: 50px;
+  height: 50px;
+}
+.WeatherWidget {
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 0 20px;
+  min-width: 400px;
+  min-height: 400px;
+}
+.WeatherWidget .date {
+  font-size: 20px;
+  text-align: center;
+}
+.WeatherWidget .day {
+  font-size: 24px;
+  text-align: center;
+}
+.WeatherWidget h3 {
+  text-align: center;
+  margin-top: 0;
+}
+.WeatherWidget img {
+  width: 150px;
+  height: 150px;
+}
+.WeatherWidget .temperature {
+  display: flex;
+  justify-content: center;
+}
+.WeatherWidget .temperature span {
+  font-size: 18px;
+}
+.WeatherWidget .wind{
+  display: flex;
+}
+.WeatherWidget .wind div{
+  width: 50%;
+  text-align: center;
+}
+.WeatherWidget .wind span{
+ font-weight: bold;
+ font-size: 30px;
+}
+.WeatherWidget .wind div div{
+ width: 100%;
+}
+.WeatherWidget .wind .arrow{
+ height: 30px;
+}
+
+#footer_container {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0px -5px 13px 0px rgba(34, 33, 33, 0.1);
+  -webkit-box-shadow: 0px -5px 13px 0px rgba(34, 33, 33, 0.1);
+  -moz-box-shadow: 0px -5px 13px 0px rgba(34, 33, 33, 0.1);
+  background-color: skyblue;
+}
+
+.lds-ring {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(20, 18, 18) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
   }
-  .navbar {
-    width: 100%;
-    padding: 15px 100px;
-    font-size: 19px;
-    background-color: skyblue;
-    box-shadow: 0px 5px 13px 0px rgba(34, 33, 33, 0.1);
-    -webkit-box-shadow: 0px 5px 13px 0px rgba(34, 33, 33, 0.1);
-    -moz-box-shadow: 0px 5px 13px 0px rgba(34, 33, 33, 0.1);
+  100% {
+    transform: rotate(360deg);
   }
-  .navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar .container ul {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: skyblue;
-        list-style: none;
-        align-items: center;
-        margin-left: 50px;
-        padding: 0;
-    }
-    .navbar .container ul li {
-          margin: 0 5px;
-    }
-    .navbar .container ul li a {
-            color: black;
-            text-decoration: none;
-          }
-          a:hover {
-            color: red;      
-  }
-  
-  .navbar-brand img{
-      width: 50px;
-  }
-  .navbar-menu {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #footer_container{
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    box-shadow: 0px -5px 13px 0px rgba(34, 33, 33, 0.1);
-    -webkit-box-shadow: 0px -5px 13px 0px rgba(34, 33, 33, 0.1);
-    -moz-box-shadow: 0px -5px 13px 0px rgba(34, 33, 33, 0.1);
-    background-color: skyblue;
-  }
+}
